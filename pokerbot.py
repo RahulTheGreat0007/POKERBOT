@@ -4,7 +4,7 @@ import random
 from typing import List, Tuple
 
 # -------------------------
-# 1. Basic card utilities (FROM TEMPLATE - SAME)
+# 1. Basic card utilities 
 # -------------------------
 RANKS = "23456789TJQKA"
 RANK_VALUE = {r: i + 2 for i, r in enumerate(RANKS)}
@@ -21,7 +21,7 @@ def is_straight_3(rank_values: List[int]) -> Tuple[bool, int]:
     return False, 0
 
 # --------------------------------------
-# 2. Hand category evaluation (FROM TEMPLATE - SAME)
+# 2. Hand category evaluation
 # --------------------------------------
 def hand_category(hole: List[str], table: str) -> int:
     cards = hole + [table]
@@ -39,7 +39,7 @@ def hand_category(hole: List[str], table: str) -> int:
     return 0
 
 # --------------------------------------
-# 3. HELPER: Compare two hands (ADDED BY US)
+# 3. HELPER: Compare two hands 
 # --------------------------------------
 def compare_hands_internal(my_cards: List[str], table: str, opp_cards: List[str]) -> float:
     """
@@ -144,7 +144,7 @@ def decide_action(state: dict) -> str:
         return "FOLD"
 
 # -----------------------------
-# 5. I/O glue (FROM TEMPLATE - SAME)
+# 5. I/O glue 
 # -----------------------------
 def main():
     raw = sys.stdin.read().strip()
@@ -160,4 +160,5 @@ def main():
     sys.stdout.write(json.dumps({"action": action}))
 
 if __name__ == "__main__":
+
     main()
